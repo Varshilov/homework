@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+/**
+ * Created by Nico on 5/27/2017.
+ */
+public class Profit {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        int workingDaysMonthly = Integer.parseInt(scanner.nextLine());
+        double moneyPerDay = Double.parseDouble(scanner.nextLine());
+        double currence = Double.parseDouble(scanner.nextLine());
+
+
+        double monthSalary = workingDaysMonthly * moneyPerDay;
+        double annualIncome = (monthSalary * 12) + monthSalary * 2.5;
+        double tax = 0.25 * annualIncome;
+        double afterTax = annualIncome - tax;
+        double inLv = afterTax * currence;
+        double daily = inLv / 365;
+
+        System.out.printf("%.2f", daily);
+
+
+
+
+    }
+}

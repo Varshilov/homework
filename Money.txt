@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+/**
+ * Created by Nico on 5/23/2017.
+ */
+public class Money {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int bitcoinCount = Integer.parseInt(scanner.nextLine());
+        double uansCount = Double.parseDouble(scanner.nextLine());
+        double commision = Double.parseDouble(scanner.nextLine());
+
+        double bitCointValue = 1168;
+        double uanValue = 0.15;
+        double dollarValue = 1.76;
+        double euroValue = 1.95;
+
+        double bitCoinToLeva = bitCointValue * bitcoinCount;
+        double uansToDollars = uansCount * uanValue;
+        double dollarsToLeva = uansToDollars * dollarValue;
+        //System.out.println(dollarsToLeva);
+        double moneyInLeva = bitCoinToLeva + dollarsToLeva;
+        double moneyToEuro = moneyInLeva / euroValue;
+        double allSum = moneyToEuro - (commision / 100 * moneyToEuro);
+        System.out.printf("%.2f",allSum);
+
+
+    }
+}

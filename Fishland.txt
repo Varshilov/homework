@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+/**
+ * Created by Nico on 5/28/2017.
+ */
+public class Fishland {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        double skumriaPrice = Double.parseDouble(scanner.nextLine());
+        double cacaPrice = Double.parseDouble(scanner.nextLine());
+        double palamudKg = Double.parseDouble(scanner.nextLine());
+        double safridKg = Double.parseDouble(scanner.nextLine());
+        int midiKg = Integer.parseInt(scanner.nextLine());
+
+        double palamud = skumriaPrice + (0.60 * skumriaPrice);
+        double safrid =cacaPrice + (0.80 * cacaPrice);
+        double midi = 7.5 * midiKg;
+        double palamudSum = palamud * palamudKg;
+        double safridSum = safrid * safridKg;
+
+        double sum = midi + palamudSum + safridSum;
+        System.out.printf("%.2f", sum);
+
+
+
+
+
+    }
+}

@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+/**
+ * Created by Nico on 5/17/2017.
+ */
+public class AlcoholMarket {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        double wiskyPrice = Double.parseDouble(scanner.nextLine());
+        double beerLt = Double.parseDouble(scanner.nextLine());
+        double wineLt = Double.parseDouble(scanner.nextLine());
+        double rakiaLt = Double.parseDouble(scanner.nextLine());
+        double wiskyLt = Double.parseDouble(scanner.nextLine());
+
+        double rakiaPrice = wiskyPrice / 2;
+        double rakiaSum = rakiaPrice * rakiaLt;
+        double winePrice = rakiaPrice -  (rakiaPrice * 40 / 100);
+        double wineSum = winePrice * wineLt;
+        double beerPrice = rakiaPrice - (rakiaPrice * 80 / 100);
+        double beerSum = beerPrice * beerLt;
+        double wiskiSum = wiskyPrice * wiskyLt;
+
+        double moneyNeeded = rakiaSum + wineSum + beerSum + wiskiSum;
+
+        System.out.printf("%.2f", moneyNeeded);
+
+
+
+    }
+}

@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+/**
+ * Created by Nico on 5/22/2017.
+ */
+public class RepairingTheTiles {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        double sideOfThePlayground = Double.parseDouble(scanner.nextLine());
+        double widthOfOneTile = Double.parseDouble(scanner.nextLine());
+        double lenghtOfOneTile = Double.parseDouble(scanner.nextLine());
+        double widthOfTheBench = Double.parseDouble(scanner.nextLine());
+        double lenghtOfTheBench = Double.parseDouble(scanner.nextLine());
+        double time = 0.2;
+
+
+        double playgroundArea = sideOfThePlayground * sideOfThePlayground;
+        double benchArea = widthOfTheBench * lenghtOfTheBench;
+        double areaToCover = playgroundArea - benchArea;
+        double tilesArea = widthOfOneTile * lenghtOfOneTile;
+        double tilesNeeded = areaToCover / tilesArea;
+        double timeNeeded = tilesNeeded * time;
+
+        System.out.printf("%.2f",tilesNeeded);
+        System.out.println();
+        System.out.printf("%.2f",timeNeeded);
+
+
+    }
+}

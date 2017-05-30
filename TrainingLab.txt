@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+/**
+ * Created by Nico on 5/20/2017.
+ */
+public class Studyroom {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        double width = Double.parseDouble(scanner.nextLine());
+        double lenght = Double.parseDouble(scanner.nextLine());
+
+        double desksInWidth = (width * 100) / 120;
+        double desksInWidhtSum = Math.floor(desksInWidth);
+        double desksInLenght =((lenght * 100) - 100) / 70;
+        double desksInLenghtSum = Math.floor(desksInLenght);
+        double desksSum = (desksInWidhtSum * desksInLenghtSum) - 3;
+
+
+        System.out.printf("%.0f",desksSum);
+
+
+    }
+}
